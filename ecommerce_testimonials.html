@@ -2,12 +2,12 @@
 <html lang="en">
 
 
-<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_add_product.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:01 GMT -->
+<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_customers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:02 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Adminca bootstrap 4 &amp; angular 5 admin template, Шаблон админки | E-commerce Add Product</title>
+    <title>Adminca bootstrap 4 &amp; angular 5 admin template, Шаблон админки | E-commerce Customers list</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <link href="assets/vendors/toastr/toastr.min.css" rel="stylesheet" />
     <link href="assets/vendors/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
     <!-- PLUGINS STYLES-->
-    <link href="assets/vendors/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="assets/vendors/dataTables/datatables.min.css" rel="stylesheet" />
     <!-- THEME STYLES-->
     <link href="assets/css/main.min.css" rel="stylesheet" />
     <!-- PAGE LEVEL STYLES-->
@@ -287,7 +287,7 @@
                                 <a href="ecommerce_customers.html">Client list</a>
                             </li>
                             <li>
-                                <a href="ecommerce_testimonials.html">Témoignages</a>
+                                <a href="ecommerce_customers.html">Témoignages</a>
                             </li>
                         </ul>
                     </li>
@@ -310,97 +310,151 @@
             <div class="page-content fade-in-up">
                 <div class="ibox">
                     <div class="ibox-body">
-                        <h5 class="font-strong mb-5">ADD NEW PRODUCT</h5>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div>
-                                    <img src="assets/img/products/27.jpg" alt="image" />
+                        <div class="flexbox mb-5">
+                            <h5 class="font-strong">CUSTOMERS LIST</h5>
+                            <div class="flexbox">
+                                <div class="input-group-icon input-group-icon-left mr-3">
+                                    <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
+                                    <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Search ...">
                                 </div>
-                                <div class="flexbox-b mt-4">
-                                    <div class="mr-2">
-                                        <img src="assets/img/products/28.jpg" alt="image" />
-                                    </div>
-                                    <div class="mr-2">
-                                        <img src="assets/img/products/29.jpg" alt="image" />
-                                    </div>
-                                    <div class="mr-2">
-                                        <img src="assets/img/products/30.jpg" alt="image" />
-                                    </div>
-                                    <div class="file-input-plus file-input"><i class="la la-plus-circle"></i>
-                                        <input type="file">
-                                    </div>
-                                </div>
+                                <a class="btn btn-rounded btn-primary btn-air" href="ecommerce_add_testimonial.html">Add Testimonial</a>
                             </div>
-                            <div class="col-lg-8">
-                                <form action="javascript:;">
-                                    <div class="form-group mb-4">
-                                        <label>Product Name</label>
-                                        <input class="form-control form-control-solid" type="text" placeholder="Enter Product Name">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group mb-4">
-                                            <label>Category</label>
-                                            <div>
-                                                <select class="selectpicker show-tick form-control" title="Please select" data-style="btn-solid">
-                                                    <optgroup label="Electronics">
-                                                        <option>TV & Video</option>
-                                                        <option>Cameras & Photo</option>
-                                                        <option>Computers & Tablets</option>
-                                                    </optgroup>
-                                                    <optgroup label="Fashion">
-                                                        <option>Health & Beauty</option>
-                                                        <option>Shoes</option>
-                                                        <option>Handbags & Purses</option>
-                                                        <option>Jewelry and Watches</option>
-                                                    </optgroup>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 form-group mb-4">
-                                            <label>SKU</label>
-                                            <input class="form-control form-control-solid" type="text" placeholder="SKU Number">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-4 form-group mb-4">
-                                            <label>Price</label>
-                                            <input class="form-control form-control-solid" type="text" placeholder="Unit Price">
-                                        </div>
-                                        <div class="col-sm-4 form-group mb-4">
-                                            <label>Currency </label>
-                                            <div>
-                                                <select class="selectpicker show-tick form-control" title="Please select" data-style="btn-solid">
-                                                    <option>USD</option>
-                                                    <option>Euro</option>
-                                                    <option>Rouble</option>
-                                                    <option>Pound</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4 form-group mb-4">
-                                            <label>Quantity</label>
-                                            <input class="form-control form-control-solid" type="text" placeholder="Quantity">
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label>Tags</label>
-                                        <input class="tagsinput form-control form-control-solid" type="text" placeholder="Tags" value="Fashion,Dress,Broadway,Autumn collection,Shop">
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label>Description</label>
-                                        <textarea class="form-control form-control-solid" rows="4" placeholder="Description"></textarea>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label class="ui-switch switch-icon mr-3 mb-0">
-                                            <input type="checkbox" checked="">
-                                            <span></span>
-                                        </label>Available</div>
-                                    <div class="text-right">
-                                        <button class="btn btn-primary btn-air mr-2">Save</button>
-                                        <button class="btn btn-secondary">Cancel</button>
-                                    </div>
-                                </form>
-                            </div>
+                        </div>
+                        <div class="table-responsive row">
+                            <table class="table table-bordered table-hover" id="customers-table">
+                                <thead class="thead-default thead-lg">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Customer</th>
+                                        <th>Email</th>
+                                        <th>Testimonial</th>
+                                        <th>Approval</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u6.jpg" alt="image" width="40" />Connor Perez</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u8.jpg" alt="image" width="40" />Lynn Weaver</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u11.jpg" alt="image" width="40" />Tyrone Carroll</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u10.jpg" alt="image" width="40" />Stella Obrien</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u2.jpg" alt="image" width="40" />Becky Brooks</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u5.jpg" alt="image" width="40" />Bob Gonzalez</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u9.jpg" alt="image" width="40" />Tammy Newman</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u7.jpg" alt="image" width="40" />Jeanne Smith</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u3.jpg" alt="image" width="40" />Frank Cruz</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>
+                                            <img class="img-circle mr-3" src="assets/img/users/u1.jpg" alt="image" width="40" />Jeanne Gonzalez</td>
+                                        <td>example@gmail.com</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolor reprehenderit, aliquam fugit id neque sed iusto libero soluta quaerat voluptatum illo laboriosam eveniet similique commodi blanditiis modi vitae officia.</td>
+                                        
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-thumb-up"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -842,20 +896,34 @@
     <script src="assets/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="assets/vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <!-- PAGE LEVEL PLUGINS-->
-    <script src="assets/vendors/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="assets/vendors/dataTables/datatables.min.js"></script>
     <!-- CORE SCRIPTS-->
     <script src="assets/js/app.min.js"></script>
     <!-- PAGE LEVEL SCRIPTS-->
     <script>
         $(function() {
-            $('.tagsinput').tagsinput({
-                tagClass: 'label label-primary'
+            $('#customers-table').DataTable({
+                pageLength: 10,
+                fixedHeader: true,
+                responsive: true,
+                "sDom": 'rtip',
+                columnDefs: [{
+                    targets: 'no-sort',
+                    orderable: false
+                }]
             });
-            $('.tagsinput.form-control-solid').siblings('.bootstrap-tagsinput').addClass('form-control-solid');
+
+            var table = $('#customers-table').DataTable();
+            $('#key-search').on('keyup', function() {
+                table.search(this.value).draw();
+            });
+            $('#type-filter').on('change', function() {
+                table.column(2).search($(this).val()).draw();
+            });
         });
     </script>
 </body>
 
 
-<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_add_product.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:02 GMT -->
+<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_customers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:02 GMT -->
 </html>
