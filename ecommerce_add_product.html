@@ -254,28 +254,40 @@
                     <!-- <li class="heading">Clients</li> -->
                     <li>
                         <a href="javascript:;"><i class="sidebar-item-icon ti-shopping-cart"></i>
-                            <span class="nav-label">produits</span><i class="fa fa-angle-left arrow"></i></a>
+                            <span class="nav-label">Produits</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
                             <li>
-                                <a href="ecommerce_add_product.html">add new Product</a>
+                                <a href="ecommerce_add_product.html">Ajouter un produit</a>
                             </li>
                             <li>
-                                <a href="ecommerce_products_list.html">Products list</a>
+                                <a href="ecommerce_products_list.html">Liste des produits</a>
+                            </li>
+							<li>
+                                <a href="ecommerce_categories_list.html">Liste des catégories</a>
                             </li>
                             <li>
-                                <a href="ecommerce_products_list.html">Commentaires</a>
+                                <a href="ecommerce_products_comments.html">Liste des commentaires</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;"><i class="sidebar-item-icon ti-package"></i>
-                            <span class="nav-label">Ordres</span><i class="fa fa-angle-left arrow"></i></a>
+                            <span class="nav-label">Commandes</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
                             <li>
-                                <a href="ecommerce_orders_list.html">Orders list</a>
+                                <a href="ecommerce_orders_list.html">Liste des commandes</a>
+                            </li>
+						</ul>
+                    </li>
+					<li>
+                        <a href="javascript:;"><i class="sidebar-item-icon ti-tag"></i>
+                            <span class="nav-label">Coupons</span><i class="fa fa-angle-left arrow"></i></a>
+                        <ul class="nav-2-level collapse">
+                            <li>
+                                <a href="ecommerce_coupons_list.html">Liste des coupons</a>
                             </li>
                             <li>
-                                <a href="ecommerce_orders_list.html">Coupons list</a>
+                                <a href="ecommerce_add_coupon.html">Ajouter un coupon</a>
                             </li>
                         </ul>
                     </li>
@@ -310,94 +322,68 @@
             <div class="page-content fade-in-up">
                 <div class="ibox">
                     <div class="ibox-body">
-                        <h5 class="font-strong mb-5">ADD NEW PRODUCT</h5>
+                        <h5 class="font-strong mb-5">AJOUTER UN NOUVEAU PRODUIT</h5>
                         <div class="row">
                             <div class="col-lg-4">
                                 <div>
-                                    <img src="assets/img/products/27.jpg" alt="image" />
+                                    <img src="assets/img/products/placeholder_product.png" alt="image" />
                                 </div>
                                 <div class="flexbox-b mt-4">
-                                    <div class="mr-2">
-                                        <img src="assets/img/products/28.jpg" alt="image" />
-                                    </div>
-                                    <div class="mr-2">
-                                        <img src="assets/img/products/29.jpg" alt="image" />
-                                    </div>
-                                    <div class="mr-2">
-                                        <img src="assets/img/products/30.jpg" alt="image" />
-                                    </div>
                                     <div class="file-input-plus file-input"><i class="la la-plus-circle"></i>
-                                        <input type="file">
+                                        <input type="file" multiple>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-8">
                                 <form action="javascript:;">
                                     <div class="form-group mb-4">
-                                        <label>Product Name</label>
-                                        <input class="form-control form-control-solid" type="text" placeholder="Enter Product Name">
+                                        <label>Nom du produit</label>
+                                        <input class="form-control form-control-solid" type="text" placeholder="Nom du produit">
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 form-group mb-4">
-                                            <label>Category</label>
+                                            <label>Catégorie</label>
                                             <div>
-                                                <select class="selectpicker show-tick form-control" title="Please select" data-style="btn-solid">
-                                                    <optgroup label="Electronics">
-                                                        <option>TV & Video</option>
-                                                        <option>Cameras & Photo</option>
-                                                        <option>Computers & Tablets</option>
+                                                <select class="selectpicker show-tick form-control" title="Sélectionner" data-style="btn-solid">
+                                                    <optgroup label="Femmes">
+														<option>Visage</option>
+                                                        <option>Cheveux</option>
+                                                        <option>Corps et bain</option>
+														<option>Parfums</option>
                                                     </optgroup>
-                                                    <optgroup label="Fashion">
-                                                        <option>Health & Beauty</option>
-                                                        <option>Shoes</option>
-                                                        <option>Handbags & Purses</option>
-                                                        <option>Jewelry and Watches</option>
+                                                    <optgroup label="Hommes">
+                                                        <option>Parfums</option>
                                                     </optgroup>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 form-group mb-4">
-                                            <label>SKU</label>
-                                            <input class="form-control form-control-solid" type="text" placeholder="SKU Number">
+                                            <label>Référence</label>
+                                            <input class="form-control form-control-solid" type="text" placeholder="Numéro de référence">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4 form-group mb-4">
-                                            <label>Price</label>
-                                            <input class="form-control form-control-solid" type="text" placeholder="Unit Price">
+                                            <label>Prix</label>
+                                            <input class="form-control form-control-solid" type="text" placeholder="Prix unitaire">
                                         </div>
                                         <div class="col-sm-4 form-group mb-4">
-                                            <label>Currency </label>
-                                            <div>
-                                                <select class="selectpicker show-tick form-control" title="Please select" data-style="btn-solid">
-                                                    <option>USD</option>
-                                                    <option>Euro</option>
-                                                    <option>Rouble</option>
-                                                    <option>Pound</option>
-                                                </select>
-                                            </div>
+                                            <label>Quantité totale</label>
+                                            <input class="form-control form-control-solid" type="text" placeholder="Quantité totale">
                                         </div>
-                                        <div class="col-sm-4 form-group mb-4">
-                                            <label>Quantity</label>
-                                            <input class="form-control form-control-solid" type="text" placeholder="Quantity">
+										<div class="col-sm-4 form-group mb-4">
+                                            <label>Taux d'évaluation</label>
+                                            <input class="form-control form-control-solid" type="text" placeholder="Taux d'évaluation">
                                         </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label>Tags</label>
-                                        <input class="tagsinput form-control form-control-solid" type="text" placeholder="Tags" value="Fashion,Dress,Broadway,Autumn collection,Shop">
                                     </div>
                                     <div class="form-group mb-4">
                                         <label>Description</label>
                                         <textarea class="form-control form-control-solid" rows="4" placeholder="Description"></textarea>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label class="ui-switch switch-icon mr-3 mb-0">
-                                            <input type="checkbox" checked="">
-                                            <span></span>
-                                        </label>Available</div>
+									
                                     <div class="text-right">
-                                        <button class="btn btn-primary btn-air mr-2">Save</button>
-                                        <button class="btn btn-secondary">Cancel</button>
+                                        <button class="btn btn-primary btn-air mr-2">Valider</button>
+                                        <button class="btn btn-secondary">Annuler</button>
                                     </div>
                                 </form>
                             </div>

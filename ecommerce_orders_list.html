@@ -254,28 +254,40 @@
                     <!-- <li class="heading">Clients</li> -->
                     <li>
                         <a href="javascript:;"><i class="sidebar-item-icon ti-shopping-cart"></i>
-                            <span class="nav-label">produits</span><i class="fa fa-angle-left arrow"></i></a>
+                            <span class="nav-label">Produits</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
                             <li>
-                                <a href="ecommerce_add_product.html">add new Product</a>
+                                <a href="ecommerce_add_product.html">Ajouter un produit</a>
                             </li>
                             <li>
-                                <a href="ecommerce_products_list.html">Products list</a>
+                                <a href="ecommerce_products_list.html">Liste des produits</a>
+                            </li>
+							<li>
+                                <a href="ecommerce_categories_list.html">Liste des catégories</a>
                             </li>
                             <li>
-                                <a href="ecommerce_products_list.html">Commentaires</a>
+                                <a href="ecommerce_products_comments.html">Liste des commentaires</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;"><i class="sidebar-item-icon ti-package"></i>
-                            <span class="nav-label">Ordres</span><i class="fa fa-angle-left arrow"></i></a>
+                            <span class="nav-label">Commandes</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
                             <li>
-                                <a href="ecommerce_orders_list.html">Orders list</a>
+                                <a href="ecommerce_orders_list.html">Liste des commandes</a>
+                            </li>
+						</ul>
+                    </li>
+					<li>
+                        <a href="javascript:;"><i class="sidebar-item-icon ti-tag"></i>
+                            <span class="nav-label">Coupons</span><i class="fa fa-angle-left arrow"></i></a>
+                        <ul class="nav-2-level collapse">
+                            <li>
+                                <a href="ecommerce_coupons_list.html">Liste des coupons</a>
                             </li>
                             <li>
-                                <a href="ecommerce_orders_list.html">Coupons list</a>
+                                <a href="ecommerce_add_coupon.html">Ajouter un coupon</a>
                             </li>
                         </ul>
                     </li>
@@ -310,21 +322,19 @@
             <div class="page-content fade-in-up">
                 <div class="ibox">
                     <div class="ibox-body">
-                        <h5 class="font-strong mb-4">ORDERS LIST</h5>
+                        <h5 class="font-strong mb-4">LISTE DES COMMANDES</h5>
                         <div class="flexbox mb-4">
                             <div class="flexbox">
-                                <label class="mb-0 mr-2">Type:</label>
-                                <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
-                                    <option value="">All</option>
-                                    <option>Shipped</option>
-                                    <option>Completed</option>
-                                    <option>Pending</option>
-                                    <option>Canceled</option>
+                                <label class="mb-0 mr-2">Type de paiement :</label>
+                                <select class="selectpicker show-tick form-control" id="type-filter" title="Filtrer" data-style="btn-solid" data-width="150px">
+                                    <option value="">Tous</option>
+                                    <option>En ligne</option>
+                                    <option>À la livraison</option>
                                 </select>
                             </div>
                             <div class="input-group-icon input-group-icon-left mr-3">
                                 <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
-                                <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Search ...">
+                                <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Rechercher ...">
                             </div>
                         </div>
                         <div class="table-responsive row">
@@ -332,11 +342,10 @@
                                 <thead class="thead-default thead-lg">
                                     <tr>
                                         <th>#</th>
-                                        <th>Order ID</th>
-                                        <th>Customer</th>
-                                        <th>Total Price</th>
-                                        <th>Status</th>
-                                        <th>Payment</th>
+                                        <th>ID</th>
+                                        <th>Client</th>
+                                        <th>Prix total</th>
+										<th>Paiement</th>
                                         <th>Date</th>
                                         <th class="no-sort"></th>
                                     </tr>
@@ -348,11 +357,8 @@
                                             <a href="ecommerce_order_details.html">#1254</a>
                                         </td>
                                         <td>Becky Brooks</td>
-                                        <td>$457</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Shipped</span>
-                                        </td>
-                                        <td>Paid</td>
+                                        <td>45 DT</td>                                        
+                                        <td>En ligne</td>
                                         <td>17.05.2018</td>
                                         <td>
                                             <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
@@ -364,11 +370,8 @@
                                             <a href="ecommerce_order_details.html">#1253</a>
                                         </td>
                                         <td>Emma Johnson</td>
-                                        <td>$1200</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Shipped</span>
-                                        </td>
-                                        <td>Paid</td>
+                                        <td>120 DT</td>
+										<td>En ligne</td>
                                         <td>17.05.2018</td>
                                         <td>
                                             <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
@@ -380,176 +383,14 @@
                                             <a href="ecommerce_order_details.html">#1252</a>
                                         </td>
                                         <td>Noah Williams</td>
-                                        <td>$780</td>
-                                        <td>
-                                            <span class="badge badge-primary badge-pill">Pending</span>
-                                        </td>
-                                        <td>Paid</td>
+                                        <td>78 DT</td>
+                                        <td>À la livraison</td>
                                         <td>16.05.2018</td>
                                         <td>
                                             <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1251</a>
-                                        </td>
-                                        <td>Sophia Jones</td>
-                                        <td>$105</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Completed</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>15.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1250</a>
-                                        </td>
-                                        <td>Jacob Brown</td>
-                                        <td>$40</td>
-                                        <td>
-                                            <span class="badge badge-primary badge-pill">Pending</span>
-                                        </td>
-                                        <td>_</td>
-                                        <td>12.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1249</a>
-                                        </td>
-                                        <td>James Davis</td>
-                                        <td>$78</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Shipped</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>12.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1248</a>
-                                        </td>
-                                        <td>Ava Wilson</td>
-                                        <td>$1450</td>
-                                        <td>
-                                            <span class="badge badge-danger badge-pill">Canceled</span>
-                                        </td>
-                                        <td>_</td>
-                                        <td>11.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1247</a>
-                                        </td>
-                                        <td>Ethan Taylor</td>
-                                        <td>$390</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Completed</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>10.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1246</a>
-                                        </td>
-                                        <td>Emily Thomas</td>
-                                        <td>$850</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Completed</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>10.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1245</a>
-                                        </td>
-                                        <td>Noah Moore</td>
-                                        <td>$220</td>
-                                        <td>
-                                            <span class="badge badge-danger badge-pill">Canceled</span>
-                                        </td>
-                                        <td>_</td>
-                                        <td>09.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1244</a>
-                                        </td>
-                                        <td>Mia Anderson</td>
-                                        <td>$90</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Completed</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>08.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1243</a>
-                                        </td>
-                                        <td>Amelia Harris</td>
-                                        <td>$670</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Completed</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>08.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>13</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1242</a>
-                                        </td>
-                                        <td>Sofia Jackson</td>
-                                        <td>$1120</td>
-                                        <td>
-                                            <span class="badge badge-success badge-pill">Completed</span>
-                                        </td>
-                                        <td>Paid</td>
-                                        <td>07.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
