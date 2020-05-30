@@ -322,70 +322,68 @@
             <div class="page-content fade-in-up">
                 <div class="ibox">
                     <div class="ibox-body">
-                        <h5 class="font-strong mb-4">LISTE DES COMMANDES</h5>
+                        <h5 class="font-strong mb-4">LISTE DES COUPONS</h5>
                         <div class="flexbox mb-4">
                             <div class="flexbox">
-                                <label class="mb-0 mr-2">Type de paiement :</label>
+                                <label class="mb-0 mr-2">Réduction :</label>
                                 <select class="selectpicker show-tick form-control" id="type-filter" title="Filtrer" data-style="btn-solid" data-width="150px">
                                     <option value="">Tous</option>
-                                    <option>En ligne</option>
-                                    <option>À la livraison</option>
+                                    <option>10%</option>
+                                    <option>20%</option>
+                                    <option>30%</option>
                                 </select>
                             </div>
-                            <div class="input-group-icon input-group-icon-left mr-3">
-                                <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
-                                <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Rechercher ...">
-                            </div>
+							<div class="flexbox">
+                                <div class="input-group-icon input-group-icon-left mr-3">
+                                    <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
+                                    <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Rechercher ...">
+                                </div>
+                                <a class="btn btn-rounded btn-primary btn-air" href="ecommerce_add_coupon.html">Ajouter un coupon</a>
+                            </div>	
                         </div>
                         <div class="table-responsive row">
                             <table class="table table-bordered table-hover" id="orders-table">
                                 <thead class="thead-default thead-lg">
                                     <tr>
-                                        <th>#</th>
                                         <th>ID</th>
-                                        <th>Client</th>
-                                        <th>Prix total</th>
-										<th>Paiement</th>
-                                        <th>Date</th>
-                                        <th class="no-sort"></th>
+                                        <th>Propriétaire</th>
+                                        <th>Code coupon</th>
+                                        <th>Nombre d'utilisation</th>
+										<th>Réduction</th>
+                                        <th>Date d'expiration</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1254</a>
-                                        </td>
-                                        <td>Becky Brooks</td>
-                                        <td>45 DT</td>                                        
-                                        <td>En ligne</td>
-                                        <td>17.05.2018</td>
+                                        <td>@Becky_Brooks</td>
+                                        <td>COBEKS10</td>
+                                        <td>5</td>
+										<td>10%</td>
+                                        <td>17/05/2020</td>
                                         <td>
                                             <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1253</a>
-                                        </td>
-                                        <td>Emma Johnson</td>
-                                        <td>120 DT</td>
-										<td>En ligne</td>
-                                        <td>17.05.2018</td>
+                                        <td>@Emma_Johnson</td>
+                                        <td>EMMJ20</td>
+										<td>10</td>
+										<td>20%</td>
+                                        <td>17/05/2020</td>
                                         <td>
                                             <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1252</a>
-                                        </td>
-                                        <td>Noah Williams</td>
-                                        <td>78 DT</td>
-                                        <td>À la livraison</td>
-                                        <td>16.05.2018</td>
+                                        <td>@Noah_Williams</td>
+                                        <td>NOAWIL30</td>
+                                        <td>20</td>
+										<td>30%</td>
+                                        <td>17/05/2020</td>
                                         <td>
                                             <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>

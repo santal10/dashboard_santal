@@ -2,12 +2,12 @@
 <html lang="en">
 
 
-<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_orders_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:02 GMT -->
+<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_products_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:02:41 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Adminca bootstrap 4 &amp; angular 5 admin template, Шаблон админки | E-commerce Orders list</title>
+    <title>Adminca bootstrap 4 &amp; angular 5 admin template, Шаблон админки | E-commerce Products list</title>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -322,75 +322,76 @@
             <div class="page-content fade-in-up">
                 <div class="ibox">
                     <div class="ibox-body">
-                        <h5 class="font-strong mb-4">LISTE DES COMMANDES</h5>
+                        <h5 class="font-strong mb-4">LISTE DES CATÉGORIES</h5>
                         <div class="flexbox mb-4">
                             <div class="flexbox">
-                                <label class="mb-0 mr-2">Type de paiement :</label>
-                                <select class="selectpicker show-tick form-control" id="type-filter" title="Filtrer" data-style="btn-solid" data-width="150px">
-                                    <option value="">Tous</option>
-                                    <option>En ligne</option>
-                                    <option>À la livraison</option>
-                                </select>
+                                
                             </div>
-                            <div class="input-group-icon input-group-icon-left mr-3">
-                                <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
-                                <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Rechercher ...">
+                            <div class="flexbox">
+                                <div class="input-group-icon input-group-icon-left mr-3">
+                                    <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
+                                    <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Rechercher ...">
+                                </div>
+                                <a class="btn btn-rounded btn-primary btn-air" href="ecommerce_add_category.html">Ajouter une catégorie</a>
                             </div>
                         </div>
                         <div class="table-responsive row">
-                            <table class="table table-bordered table-hover" id="orders-table">
+                            <table class="table table-bordered table-hover" id="products-table">
                                 <thead class="thead-default thead-lg">
                                     <tr>
-                                        <th>#</th>
                                         <th>ID</th>
-                                        <th>Client</th>
-                                        <th>Prix total</th>
-										<th>Paiement</th>
-                                        <th>Date</th>
-                                        <th class="no-sort"></th>
+                                        <th>Type</th>
+                                        <th>Nom de catégorie</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
+                                        <td>Homme</td>
+                                        <td>Parfums</td>
                                         <td>
-                                            <a href="ecommerce_order_details.html">#1254</a>
-                                        </td>
-                                        <td>Becky Brooks</td>
-                                        <td>45 DT</td>                                        
-                                        <td>En ligne</td>
-                                        <td>17.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>
-                                            <a href="ecommerce_order_details.html">#1253</a>
-                                        </td>
-                                        <td>Emma Johnson</td>
-                                        <td>120 DT</td>
-										<td>En ligne</td>
-                                        <td>17.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        <td>Femme</td>
+                                        <td>Visage</td>
+									    <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
+                                        <td>Femme</td>
+                                        <td>Cheveux</td>
                                         <td>
-                                            <a href="ecommerce_order_details.html">#1252</a>
-                                        </td>
-                                        <td>Noah Williams</td>
-                                        <td>78 DT</td>
-                                        <td>À la livraison</td>
-                                        <td>16.05.2018</td>
-                                        <td>
-                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
-                                    
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Femme</td>
+                                        <td>Corps</td>
+										<td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Femme</td>
+                                        <td>Parfums</td>
+                                        <td>
+                                            <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                            <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                      
                                 </tbody>
                             </table>
                         </div>
@@ -840,28 +841,23 @@
     <!-- PAGE LEVEL SCRIPTS-->
     <script>
         $(function() {
-            $('#orders-table').DataTable({
+            $('#products-table').DataTable({
                 pageLength: 10,
                 fixedHeader: true,
                 responsive: true,
                 "sDom": 'rtip',
-                columnDefs: [{
-                    targets: 'no-sort',
-                    orderable: false
-                }]
             });
-
-            var table = $('#orders-table').DataTable();
+            var table = $('#products-table').DataTable();
             $('#key-search').on('keyup', function() {
                 table.search(this.value).draw();
             });
             $('#type-filter').on('change', function() {
-                table.column(4).search($(this).val()).draw();
+                table.column(2).search($(this).val()).draw();
             });
         });
     </script>
 </body>
 
 
-<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_orders_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:02 GMT -->
+<!-- Mirrored from admincast.com/adminca/preview/admin_1/html/ecommerce_products_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2020 19:03:01 GMT -->
 </html>
